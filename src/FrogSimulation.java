@@ -6,7 +6,7 @@ public class FrogSimulation {
         maxHops = numHops;
     }
     private int hopDistance() {
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.67) {
             return (int)(Math.random()*14+1);
         }
         else return (int)-(Math.random()*14+1);
@@ -17,6 +17,10 @@ public class FrogSimulation {
         return distance >= goalDistance;
     }
     public double runSimulations(int num) {
-
+        double numofTrue = 0;
+        for (int i = 0; i < num; i++) {
+            if (simulate()) numofTrue += 1;
+        }
+        return numofTrue / num;
     }
 }
