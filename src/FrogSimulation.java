@@ -17,10 +17,10 @@ public class FrogSimulation {
         return distance >= goalDistance;
     }
     public double runSimulations(int num) {
-        double numofTrue = 0;
+        double numTrue = 0;
         for (int i = 0; i < num; i++) {
-            if (simulate()) numofTrue += 1;
+            if (simulate()) numTrue += 1;
         }
-        return numofTrue / num;
+        return numTrue / num;
     }
 }
